@@ -34,20 +34,7 @@ public class Formulaire {
 
         JPanel civilite = new Civilite();
         JPanel adresse = new Adresse();
-
-        //////////////////////////////////////////////////////////////////////////////////////
-        //////////////////////////LANGAGES
-        JPanel langages = new JPanel(new GridLayout(0, 4));
-        langages.setAlignmentX(JTextField.LEFT);
-        Border lineLangage = BorderFactory.createTitledBorder("Langages");
-        langages.setBorder(lineLangage);
-
-        String[] myLangages = {"C", "C++", "C#", "JAVA SE", "JAVA EE", "Python", "Shell", "Delphi", "Pascal", "TurboPascal"};
-        JCheckBox[] checkBox = new JCheckBox[myLangages.length];
-        for (int i = 0; i < myLangages.length; i++) {
-            checkBox[i] = new JCheckBox(myLangages[i]);
-            langages.add(checkBox[i]);
-        }
+        JPanel langages = new Langages();
 
         //////////////////////////////////////////////////////////////////////////////////////
         /////////////////////////PASSIONS
