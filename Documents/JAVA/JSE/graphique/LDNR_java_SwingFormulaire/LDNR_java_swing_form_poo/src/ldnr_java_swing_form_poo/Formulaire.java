@@ -33,43 +33,7 @@ public class Formulaire {
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
 
         JPanel civilite = new Civilite();
-        ///////////////////////////////////////////////////////////////////////////
-        ///////////////////ADDRESS
-        JPanel address = new JPanel();
-        address.setAlignmentX(JTextField.LEFT);
-        address.setLayout(new BoxLayout(address, BoxLayout.Y_AXIS));
-        Border bluelineaddress = BorderFactory.createTitledBorder("Adresse");
-        address.setBorder(bluelineaddress);
-        //address.setBackground(Color.red);
-        JPanel num = new JPanel(new BorderLayout());
-        //num.setAlignmentX(JTextField.LEFT);
-        JLabel labelNumero = new JLabel("Numéro");
-        JTextField numero = new JTextField("", 35);
-        num.add(labelNumero, BorderLayout.WEST);
-        num.add(numero, BorderLayout.EAST);
-        JPanel ru = new JPanel(new BorderLayout());
-        //  ru.setAlignmentX(JTextField.LEFT);
-        JLabel labelRue = new JLabel("Rue");
-        JTextField rue = new JTextField("", 35);
-        ru.add(labelRue, BorderLayout.WEST);
-        ru.add(rue, BorderLayout.EAST);
-        JPanel codePostal = new JPanel(new BorderLayout());
-        //codePostal.setAlignmentX(JTextField.LEFT);
-        JLabel labelCp = new JLabel("CP");
-        JTextField cp = new JTextField("", 35);
-        codePostal.add(labelCp, BorderLayout.WEST);
-        codePostal.add(cp, BorderLayout.EAST);
-        JPanel comm = new JPanel(new BorderLayout());
-        //comm.setAlignmentX(JTextField.LEFT);
-        JLabel labelCommune = new JLabel("Commune");
-        JTextField commune = new JTextField("", 35);
-        comm.add(labelCommune, BorderLayout.WEST);
-        comm.add(commune, BorderLayout.EAST);
-
-        address.add(num);
-        address.add(ru);
-        address.add(codePostal);
-        address.add(comm);
+        JPanel adresse = new Adresse();
 
         //////////////////////////////////////////////////////////////////////////////////////
         //////////////////////////LANGAGES
