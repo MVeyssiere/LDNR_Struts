@@ -32,74 +32,7 @@ public class Formulaire {
         JPanel content = new JPanel();
         content.setLayout(new BoxLayout(content, BoxLayout.Y_AXIS));
 
-        /////////////////////////////////////////////////////
-        //////////PANEL CIVILITE
-        JPanel civilite = new JPanel();
-        civilite.setAlignmentX(JTextField.LEFT);
-        civilite.setLayout(new BoxLayout(civilite, BoxLayout.Y_AXIS));
-        Border civilTitle = BorderFactory.createTitledBorder("Civilité");
-        civilite.setBorder(civilTitle);
-
-        /////Monsieur / Madame / Mademoiselle
-        JPanel type = new JPanel();
-        type.setLayout(new FlowLayout(FlowLayout.LEADING));
-        // type.setBackground(Color.ORANGE);
-        ButtonGroup grpType = new ButtonGroup(); // to select only one button on the three
-
-        //création des radio buttons.
-        JRadioButton radioType1 = new JRadioButton("M.");
-        JRadioButton radioType2 = new JRadioButton("Mme");
-        JRadioButton radioType3 = new JRadioButton("Mlle");
-        grpType.add(radioType1);
-        grpType.add(radioType2);
-        grpType.add(radioType3);
-        type.add(radioType1);//insertion des radio buttons dans le panel type
-        type.add(radioType2);
-        type.add(radioType3);
-        civilite.add(type);
-
-        //type.setComponentOrientation(ComponentOrientation.LEFT_TO_RIGHT);
-        ////// Nom / Prenom
-        JPanel name = new JPanel(new BorderLayout());
-        JLabel labelNom = new JLabel("Nom");
-        JTextField nom = new JTextField("", 35);
-        name.add(labelNom, BorderLayout.WEST);
-        name.add(nom, BorderLayout.EAST);
-
-        JPanel surname = new JPanel(new BorderLayout());
-        JLabel labelPrenom = new JLabel("Prenom");
-        JTextField prenom = new JTextField("", 35);
-        surname.add(labelPrenom, BorderLayout.WEST);
-        surname.add(prenom, BorderLayout.EAST);
-
-        civilite.add(name);
-        civilite.add(surname);
-
-        /////////// date de naissance
-        JLabel naissance = new JLabel("Date de naissance ");
-        JPanel date = new JPanel(new FlowLayout(FlowLayout.LEFT));
-        String[] month = {"January", "February", "March",
-            "April", "May", "June", "July", "August",
-            "September", "October", "November", "December"};
-        JComboBox boxMonth = new JComboBox(month);
-
-        JComboBox boxDay = new JComboBox();
-        for (int i = 1; i <= 31; i++) {
-            boxDay.addItem(i);
-        }
-
-        JComboBox boxYear = new JComboBox();
-        for (int i = 1920; i <= 2019; i++) {
-            boxYear.addItem(i);
-        }
-        date.add(naissance);
-        date.add(boxDay);
-        date.add(boxMonth);
-        date.add(boxYear);
-
-        civilite.add(date);
-
-
+        JPanel civilite = new Civilite();
         ///////////////////////////////////////////////////////////////////////////
         ///////////////////ADDRESS
         JPanel address = new JPanel();
